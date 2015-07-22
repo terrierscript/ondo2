@@ -1,6 +1,8 @@
 import React from 'react'
 import Firebase from 'firebase'
 import classname from 'classname'
+
+
 // store
 class DegreeStorage {
   constructor(){
@@ -23,6 +25,15 @@ class DegreeStorage {
   }
 }
 
+class Icon extends React.Component{
+  render(){
+    let {size, icon} = this.props
+    let cx = ["material-icons"]
+    if(size) cx.push(size)
+    return <i className={classname(cx)}>{icon}</i>
+  }
+}
+
 class LogItem extends React.Component{
   ceil(num, digit = 100){
     return Math.ceil(num * digit) / digit
@@ -41,18 +52,42 @@ class LogItem extends React.Component{
   isHighDegree(degree){
     return (degree > 27)
   }
+  getIcon(degree){
+    return this.isHighDegree(degree) ? <Icon icon="report_problem"/> : <Icon icon="info_outline" /> 
+  }
   render(){
     let {time, degree} = this.props.log
     let pastTime = this.calcPastTime(time)
     let color = this.isHighDegree(degree) ?  "red" : "blue"
-    let currency = this.isCurrent(pastTime) ? "" : "lighten-4"
+    let icon = this.getIcon(degree)
+
+    let currency = this.isCurrent(pastTime) 
+      ? ["darken-1"] 
+      : ["lighten-3"]
     let containerCx = classname(["card", color, currency])
     return <div className={containerCx} >
       <div className="card-content">
-        <span className=" degree">{this.ceil(degree)} °</span>
-        <span className="right timestamp">{pastTime} min ago</span>
+        <b className="">
+          {this.ceil(degree)} °
+        </b>
+        <div className="right timestamp">
+          {pastTime} min ago
+        </div>
       </div>
     </div>
+  }
+}
+
+class Loading extends React.Component{
+  render(){
+    return (
+      <div className="center-align">
+        <div>Loading...</div>
+        <div className="progress">
+          <div className="indeterminate"></div>
+        </div>
+      </div>
+    )
   }
 }
 
@@ -77,8 +112,7 @@ export default class App extends React.Component{
       return <LogItem key={log.key} log={log.val} /> 
     })
     return <div>
-      <h1>Ondo</h1>
-      {logItems}
+      { (logItems.length === 0) ? <Loading /> : {logItems} }
     </div>
   }
 }
