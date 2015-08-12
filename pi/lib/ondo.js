@@ -4,10 +4,9 @@ var board = new five.Board({
 })
 
 module.exports = function(cb){
-  console.log("start")
+  // console.debug("start")
   board.once("ready", function() {
-    console.log("ready")
-    
+    // console.debug("ready")
     // This requires OneWire support using the ConfigurableFirmata
     var temperature = new five.Temperature({
       controller: "LM35",
@@ -15,8 +14,7 @@ module.exports = function(cb){
     })
 
     temperature.once("data", function(err, data){
-      console.log("tmp")
-      
+      // console.debug("tmp")
       if(err){
         console.warn(err)
       }
