@@ -1,6 +1,7 @@
 var five = require("johnny-five")
 var board = new five.Board({
-  repl: false
+  repl: false,
+  debug: false
 })
 
 module.exports = function(cb){
