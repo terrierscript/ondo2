@@ -42,9 +42,9 @@ class LogItem extends React.Component{
     try{
       var sec = ((new Date() - new Date(timeStr)) / 1000 )
       var min = sec / 60
+      return Math.ceil(min)
     }catch(e){
     }
-    return Math.ceil(min)
   }
   isCurrent(pastTime){
     return (pastTime < 10)
