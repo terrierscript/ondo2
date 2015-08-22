@@ -6,7 +6,7 @@ var argv = require('yargs')
 
 var delay = argv.delay
 console.log("Wait " + delay + "s")
-setTimeout(function(){
+// setTimeout(function(){
   console.log("start")
   dump()
-}, delay * 1000)
+// }, delay * 1000)
