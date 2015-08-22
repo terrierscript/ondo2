@@ -1,7 +1,6 @@
 var Firebase = require('firebase')
 var Degrees = new Firebase("https://torid-fire-7950.firebaseio.com/degree_log");
 var cache = require("./cache/load")
-var ondo = require("./lib/ondo")
 
 var send = function(err, degree, time){
   var time = new Date(time).toString()
@@ -17,7 +16,8 @@ var send = function(err, degree, time){
   })
 }
 setTimeout(function(){
+  var ondo = require("./lib/ondo")
   ondo(function(err, degree, time){
     send(err, degree, time)
   })
-}, 30 * 1000)
+}, 10 * 1000)
