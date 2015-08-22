@@ -20,4 +20,4 @@ setTimeout(function(){
   ondo(function(err, degree, time){
     send(err, degree, time)
   })
-}, 10 * 1000)
+}, 20 * 1000)
