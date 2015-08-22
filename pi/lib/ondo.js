@@ -19,7 +19,7 @@ module.exports = function(cb){
       if(err){
         console.warn(err)
       }
-      cb(err, data.celsius)
+      cb(err, data.celsius, new Date().getTime())
     })
   })
 }

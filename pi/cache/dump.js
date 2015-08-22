@@ -4,8 +4,8 @@ var cache = "./cache.json"
 // var ondo = function(cb){
 //   cb(null, 25.4)
 // }
-ondo(function(err, c){
-  var time = Math.ceil(new Date().getTime() / 1000)
+ondo(function(err, c, ts){
+  var time = ts
   var data = JSON.stringify({
     degree: c,
     time: time

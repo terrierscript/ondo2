@@ -2,9 +2,9 @@ var Firebase = require('firebase')
 var Degrees = new Firebase("https://torid-fire-7950.firebaseio.com/degree_log");
 var ondo = require("./lib/ondo")
 
-ondo(function(err, c){
+ondo(function(err, c, time){
   console.log("Callback")
-  var time = new Date().toString()
+  var time = new Date(time).toString()
   var data = {
     degree: c,
     error: err,
