@@ -5,13 +5,13 @@ var cache = require("./cache/load")()
 // }
 
 var log = function(degree, time){
+  var time = Math.ceil(new Date(time).getTime() / 1000)
   console.log(["degree", degree, time].join("\t"))
 }
 if(cache){
-  console.logcache.time
+  log(cache.degree, cache.time)
 }else{
-  ondo(function(err, c){
-    var time = Math.ceil(new Date().getTime() / 1000)
+  ondo(function(err, c, time){
     log(c, time)
     process.exit(0)
   })
