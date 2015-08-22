@@ -15,5 +15,5 @@ var send = function(err, degree, time){
   })
 }
 cache(function(err, degree, time){
-  send(err, cache.degree, cache.time)
+  send(err, degree, time)
 })
