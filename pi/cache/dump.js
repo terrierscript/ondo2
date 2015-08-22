@@ -1,6 +1,10 @@
 var ondo = require("../lib/ondo")
 var fs = require("fs")
 var cache = "./cache.json"
+// var ondo = function(cb){
+//   cb(null, 25.4, new Date().getTime())
+// }
+
 module.exports = function(){
   ondo(function(err, c, ts){
     var time = ts
