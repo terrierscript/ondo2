@@ -26,7 +26,8 @@
     "fireproof": "^2.5.3",
     "fly": "^0.3.4",
     "johnny-five": "^0.8.85",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "yargs": "^3.21.0"
   },
   "devDependencies": {
     "budo": "^4.1.0",
