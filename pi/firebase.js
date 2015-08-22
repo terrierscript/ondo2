@@ -9,6 +9,7 @@ var send = function(err, degree, time){
     error: err,
     time: time
   }
+  console.log(data)
   Degrees.push(data, function(err){
     console.log(err)
     process.exit(0)
