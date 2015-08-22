@@ -5,7 +5,7 @@ var cache = require("./cache/load")
 var send = function(err, degree, time){
   var time = new Date(time).toString()
   var data = {
-    degree: c,
+    degree: degree,
     error: err,
     time: time
   }
