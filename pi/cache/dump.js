@@ -1,4 +1,4 @@
-var ondo = require("./lib/ondo")
+var ondo = require("../lib/ondo")
 var fs = require("fs")
 var cache = "./cache.json"
 module.exports = function(){
