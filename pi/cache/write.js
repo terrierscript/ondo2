@@ -1,4 +1,3 @@
-var ondo = require("../lib/ondo")
 var fs = require("fs")
 var cache = "./cache.json"
 // var ondo = function(cb){
@@ -10,7 +9,5 @@ module.exports = function(c, time){
     degree: c,
     time: time
   })
-  fs.writeFile(cache, data, function(){
-    process.exit(0)
-  })
+  fs.writeFileSync(cache, data)
 }
