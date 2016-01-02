@@ -90,7 +90,7 @@ export default class App extends React.Component{
       return <LogItem key={i} time={log.time * 1000} degree={log.value} /> 
     })
     return <div>
-      { (logItems.length === 0) ? <Loading /> : {logItems} }
+      { (logItems.length === 0) ? <Loading /> : logItems }
     </div>
   }
 }
