@@ -26,6 +26,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.7.0",
     "bootflat": "^2.0.4",
     "classname": "0.0.0",
     "firebase": "^2.2.7",

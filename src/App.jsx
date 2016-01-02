@@ -1,29 +1,7 @@
 import React from 'react'
 import Firebase from 'firebase'
 import classname from 'classname'
-
-
-// store
-class DegreeStorage {
-  constructor(){
-    this.url = "https://torid-fire-7950.firebaseio.com/"
-    this.degrees = new Firebase(this.url + "degree_log")
-  }
-  degreePromise(limit = 60){
-    return new Promise((resolve, reject) => {
-      let logs = []
-      this.degrees.limitToLast(limit).on("value", function(snapshot){
-        snapshot.forEach(function(log){
-          logs.unshift({
-            key: log.key(),
-            val: log.val()
-          })
-        })
-        resolve(logs)
-      })
-    })
-  }
-}
+import {fetchDegree} from "./mackrel"
 
 class Icon extends React.Component{
   render(){
@@ -56,7 +34,7 @@ class LogItem extends React.Component{
     return this.isHighDegree(degree) ? <Icon icon="report_problem"/> : <Icon icon="info_outline" /> 
   }
   render(){
-    let {time, degree} = this.props.log
+    let {time, degree} = this.props
     let pastTime = this.calcPastTime(time)
     let color = this.isHighDegree(degree) ?  "red" : "blue"
     let icon = this.getIcon(degree)
@@ -99,17 +77,17 @@ export default class App extends React.Component{
     }
   }
   componentDidMount(){
-    var degreeStorage = new DegreeStorage()
-    degreeStorage.degreePromise().then((logs) => {
+    fetchDegree().then((items) => {
       this.setState({
-        logs: logs
+        logs: items
       })
     })
+
   }
   render(){
     let {logs} = this.state
-    let logItems = logs.map((log) => { 
-      return <LogItem key={log.key} log={log.val} /> 
+    let logItems = logs.slice(0, 60).map((log, i) => {
+      return <LogItem key={i} time={log.time * 1000} degree={log.value} /> 
     })
     return <div>
       { (logItems.length === 0) ? <Loading /> : {logItems} }

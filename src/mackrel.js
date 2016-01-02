@@ -1,7 +1,9 @@
-import request from "request"
+const axios = require("axios")
+const url = "https://ondosan.herokuapp.com/"
+// const url = "http://localhost:5000/"
 
-const API_KEY = "k9pJYV1XudU2yATRW3X2gecCR4qvKvrB1jv9DPPVEWd1" // open key
-
-export default function getDegree(){
-  request()
+export function fetchDegree(){
+  return axios.get(url).then((response) => {
+    return response.data.metrics.reverse()
+  })
 }
