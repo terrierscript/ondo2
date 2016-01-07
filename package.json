@@ -31,7 +31,7 @@
     "classname": "0.0.0",
     "firebase": "^2.2.7",
     "fireproof": "^2.5.3",
-    "fly": "^0.3.4",
+    "fly": "^0.8.5",
     "johnny-five": "^0.8.85",
     "react": "^0.14.5",
     "yargs": "^3.21.0"
