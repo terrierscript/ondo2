@@ -29,7 +29,7 @@
     "axios": "^0.9.0",
     "bootflat": "^2.0.4",
     "classname": "0.0.0",
-    "firebase": "^2.2.7",
+    "firebase": "^2.4.0",
     "johnny-five": "^0.9.18",
     "react": "^0.14.5",
     "yargs": "^3.32.0"
