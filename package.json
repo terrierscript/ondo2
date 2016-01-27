@@ -30,7 +30,7 @@
     "bootflat": "^2.0.4",
     "classname": "0.0.0",
     "firebase": "^2.4.0",
-    "johnny-five": "^0.9.18",
+    "johnny-five": "^0.9.19",
     "react": "^0.14.6",
     "yargs": "^3.32.0"
   },
