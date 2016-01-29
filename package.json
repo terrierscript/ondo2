@@ -6,7 +6,8 @@
   "scripts": {
     "build": "browserify src/index.jsx > lib/index.js",
     "start": "budo src/index.jsx:lib/index.js -v -d --live | garnish",
-    "test": "mocha --compilers js:babel/register"
+    "test": "npm run build",
+    "todo_test": "mocha --compilers js:babel-register"
   },
   "babel": {
     "presets": [
@@ -27,6 +28,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.9.1",
+    "babel-register": "^6.4.3",
     "bootflat": "^2.0.4",
     "classname": "0.0.0",
     "firebase": "^2.4.0",
