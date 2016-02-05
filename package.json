@@ -45,7 +45,7 @@
     "babel-preset-stage-3": "^6.1.2",
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
-    "budo": "^8.0.2",
+    "budo": "^8.0.4",
     "garnish": "^5.0.1",
     "mocha": "^2.4.5"
   }
