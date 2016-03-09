@@ -46,7 +46,7 @@
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "budo": "^8.0.2",
-    "garnish": "^5.0.1",
+    "garnish": "^5.0.2",
     "mocha": "^2.4.5"
   }
 }
