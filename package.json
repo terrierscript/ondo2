@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "browserify src/index.jsx > lib/index.js",
-    "start": "budo src/index.jsx:lib/index.js -v -d --live | garnish",
+    "start": "budo src/index.jsx:lib/index.js -v -d --live",
     "test": "npm run build",
     "todo_test": "mocha --compilers js:babel-register"
   },
@@ -40,7 +40,6 @@
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "budo": "^8.0.4",
-    "garnish": "^5.0.1",
     "mocha": "^2.4.5"
   }
 }
