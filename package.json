@@ -24,7 +24,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.9.1",
+    "axios": "^0.10.0",
     "babel-register": "^6.4.3",
     "bootflat": "^2.0.4",
     "classname": "0.0.0",
