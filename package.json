@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "browserify src/index.jsx > lib/index.js",
     "start": "budo src/index.jsx:lib/index.js -v -d --live | garnish",
