@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "build": "browserify src/index.jsx > docs/lib/index.js",
+    "build": "browserify src/index.jsx > docs/index.js",
     "start": "budo src/index.jsx:lib/index.js -v -d --live",
     "test": "npm run build",
     "todo_test": "mocha --compilers js:babel-register"
