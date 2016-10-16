@@ -31,7 +31,7 @@ class LogItem extends React.Component{
     return (degree > 27)
   }
   getIcon(degree){
-    return this.isHighDegree(degree) ? <Icon icon="report_problem"/> : <Icon icon="info_outline" /> 
+    return this.isHighDegree(degree) ? <Icon icon="report_problem"/> : <Icon icon="info_outline" />
   }
   render(){
     let {time, degree} = this.props
@@ -39,8 +39,8 @@ class LogItem extends React.Component{
     let color = this.isHighDegree(degree) ?  "red" : "blue"
     let icon = this.getIcon(degree)
 
-    let currency = this.isCurrent(pastTime) 
-      ? ["darken-1"] 
+    let currency = this.isCurrent(pastTime)
+      ? ["darken-1"]
       : ["lighten-3"]
     let containerCx = classname(["card", color, currency])
     return <div className={containerCx} >
@@ -56,18 +56,14 @@ class LogItem extends React.Component{
   }
 }
 
-class Loading extends React.Component{
-  render(){
-    return (
-      <div className="center-align">
-        <div>Loading...</div>
-        <div className="progress">
-          <div className="indeterminate"></div>
-        </div>
-      </div>
-    )
-  }
-}
+const Loading = () => (
+  <div className="center-align">
+    <div>Loading...</div>
+    <div className="progress">
+      <div className="indeterminate"></div>
+    </div>
+  </div>
+)
 
 export default class App extends React.Component{
   constructor(){

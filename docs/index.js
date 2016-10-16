@@ -20931,59 +20931,44 @@ var LogItem = function (_React$Component2) {
   return LogItem;
 }(_react2.default.Component);
 
-var Loading = function (_React$Component3) {
-  _inherits(Loading, _React$Component3);
+var Loading = function Loading() {
+  return _react2.default.createElement(
+    'div',
+    { className: 'center-align' },
+    _react2.default.createElement(
+      'div',
+      null,
+      'Loading...'
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'progress' },
+      _react2.default.createElement('div', { className: 'indeterminate' })
+    )
+  );
+};
 
-  function Loading() {
-    _classCallCheck(this, Loading);
-
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(Loading).apply(this, arguments));
-  }
-
-  _createClass(Loading, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'center-align' },
-        _react2.default.createElement(
-          'div',
-          null,
-          'Loading...'
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'progress' },
-          _react2.default.createElement('div', { className: 'indeterminate' })
-        )
-      );
-    }
-  }]);
-
-  return Loading;
-}(_react2.default.Component);
-
-var App = function (_React$Component4) {
-  _inherits(App, _React$Component4);
+var App = function (_React$Component3) {
+  _inherits(App, _React$Component3);
 
   function App() {
     _classCallCheck(this, App);
 
-    var _this4 = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this));
+    var _this3 = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this));
 
-    _this4.state = {
+    _this3.state = {
       logs: []
     };
-    return _this4;
+    return _this3;
   }
 
   _createClass(App, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      var _this5 = this;
+      var _this4 = this;
 
       (0, _mackrel.fetchDegree)().then(function (items) {
-        _this5.setState({
+        _this4.setState({
           logs: items
         });
       });
