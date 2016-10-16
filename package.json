@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "browserify src/index.jsx > lib/index.js",
     "start": "budo src/index.jsx:lib/index.js -v -d --live",
@@ -41,5 +42,8 @@
     "browserify": "^13.0.0",
     "budo": "^8.0.4",
     "mocha": "^2.4.5"
+  },
+  "greenkeeper": {
+    "ignore": ["johnny-five"]
   }
 }
