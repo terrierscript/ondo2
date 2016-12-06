@@ -29,7 +29,7 @@
     "babel-register": "^6.4.3",
     "bootflat": "^2.0.4",
     "classname": "0.0.0",
-    "firebase": "^2.4.0",
+    "firebase": "^3.6.3",
     "johnny-five": "^0.9.19",
     "react": "^0.14.7",
     "react-dom": "^0.14.6",
