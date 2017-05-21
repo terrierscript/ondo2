@@ -14,12 +14,13 @@ module.exports = function(cb){
       pin: "A0"
     })
 
-    temperature.once("data", function(err, data){
+    temperature.once("data", function(data){
       // console.debug("tmp")
-      if(err){
-        console.warn(err)
-      }
-      cb(err, data.celsius, new Date().getTime())
+      // if(err){
+      //   console.warn(err)
+      // }
+      // TODO: fix api
+      cb(undefined, data.celsius, new Date().getTime())
     })
   })
 }
