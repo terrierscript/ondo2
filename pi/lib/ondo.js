@@ -20,7 +20,7 @@ module.exports = function(cb){
       //   console.warn(err)
       // }
       // TODO: fix api
-      cb(undefined, data.celsius, new Date().getTime())
+      cb(undefined, data.celsius, new Date().getTime(), data)
     })
   })
 }

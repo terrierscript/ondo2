@@ -4,7 +4,7 @@ var ondo = require("./lib/ondo")
 //   cb(null, 25.4)
 // }
 
-ondo(function(err, degree, time){
-  console.log(degree)
+ondo(function(err, degree, time, data){
+  console.log(data)
   process.exit(0)
 })
